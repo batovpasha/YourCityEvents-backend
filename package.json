@@ -1,10 +1,13 @@
 {
-  "name": "YourCityEvents-backend",
-  "version": "1.0.0",
-  "description": "Backend for the YourCityEvents app: https://github.com/fluoxe7ine/YourCityEvents",
-  "main": "index.js",
-  "repository": "https://github.com/batovpasha/YourCityEvents-backend",
-  "author": "batovpasha <batovpasha@gmail.com>",
-  "license": "MIT",
-  "private": false
+    "name": "YourCityEvents-backend",
+    "version": "1.0.0",
+    "description": "Backend for the YourCityEvents app: https://github.com/fluoxe7ine/YourCityEvents",
+    "main": "index.js",
+    "repository": "https://github.com/batovpasha/YourCityEvents-backend",
+    "author": "batovpasha <batovpasha@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "dependencies": {
+        "knex": "^0.21.1"
+    }
 }
