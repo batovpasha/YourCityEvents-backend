@@ -8,7 +8,10 @@
     "license": "MIT",
     "private": false,
     "scripts": {
-        "test:lint": "eslint . --ext js"
+        "test:lint": "eslint . --ext js",
+        "migration-dev": "knex migrate:latest --env development",
+        "migration-staging": "knex migrate:latest --env staging",
+        "migration-production": "knex migrate:latest --env production"
     },
     "dependencies": {
         "babel-eslint": "^10.1.0",
