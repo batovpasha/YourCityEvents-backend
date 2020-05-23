@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
   yce-mysql:
-    image: mysql:8
+    image: mysql:5.7
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
@@ -17,3 +17,7 @@ services:
       - yce-mysql
     environment:
       - WAIT_HOSTS=${MYSQL_HOST}:3306
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}

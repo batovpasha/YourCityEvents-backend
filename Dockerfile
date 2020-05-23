@@ -6,6 +6,7 @@ COPY package.json package.json
 COPY yarn.lock yarn.lock
 COPY knexfile.js knexfile.js
 COPY index.js index.js
+COPY migrations/ migrations/
 
 # Install app dependencies
 RUN yarn
