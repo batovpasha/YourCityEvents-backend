@@ -27,7 +27,8 @@
         "eslint-plugin-react": "^7.20.0",
         "eslint-plugin-security": "^1.4.0",
         "knex": "^0.21.1",
-        "mysql": "^2.18.1"
+        "mysql": "^2.18.1",
+        "pino": "^6.2.1"
     },
     "devDependencies": {
         "nodemon": "^2.0.4"
