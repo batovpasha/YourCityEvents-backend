@@ -11,7 +11,8 @@
         "test:lint": "eslint . --ext js",
         "migration-dev": "knex migrate:latest --env development",
         "migration-staging": "knex migrate:latest --env staging",
-        "migration-production": "knex migrate:latest --env production"
+        "migration-production": "knex migrate:latest --env production",
+        "dev": "nodemon -L index.js"
     },
     "dependencies": {
         "babel-eslint": "^10.1.0",
@@ -27,5 +28,8 @@
         "eslint-plugin-security": "^1.4.0",
         "knex": "^0.21.1",
         "mysql": "^2.18.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
     }
 }

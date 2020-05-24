@@ -1,0 +1,20 @@
+version: '3.0'
+
+services:
+  yce-mysql:
+    image: mysql:5.7
+    restart: 'no'
+    ports:
+      - '3306:3306'
+
+  yce-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.develop
+    restart: 'no'
+    depends_on:
+      - yce-mysql
+    volumes:
+      - .:/app
+    ports:
+      - '8000:8000'
