@@ -1,8 +1,11 @@
 const logger = require('pino')();
 
-try {
-    require('./app');
-} catch (err) {
-    logger.fatal(err);
-    process.exit(1);
-}
+(() => {
+    try {
+        require('./app');
+    } catch (err) {
+        logger.fatal(err);
+        process.exit(1);
+    }
+})();
+
