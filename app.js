@@ -1,5 +1,4 @@
 const express = require('express');
-const logger  = require('pino')();
 
 const {
     json,
@@ -7,13 +6,7 @@ const {
     cors
 } = require('./lib/middleware');
 
-
-// TODO: add basic routing
-
-const {
-    HOST,
-    PORT
-} = require('./config/server');
+const router = require('./lib/router');
 
 // Init express app
 const app = express();
@@ -22,10 +15,8 @@ const app = express();
 app.use(urlencoded);
 app.use(json);
 app.use(cors);
-// TODO: add router mounting
 
-app.listen(HOST, PORT, () => {
-    logger.info(`Server starts at ${HOST}:${PORT}`);
-});
+// Mount routes
+app.use('/api/v1', router);
 
 module.exports = app;

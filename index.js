@@ -1,11 +1,14 @@
 const logger = require('pino')();
+const app    = require('./app');
+
+const {
+    HOST,
+    PORT
+} = require('./config/server');
 
 (() => {
-    try {
-        require('./app');
-    } catch (err) {
-        logger.fatal(err);
-        process.exit(1);
-    }
+    app.listen(PORT, HOST, () => {
+        logger.info(`Server starts at ${HOST}:${PORT}`);
+    });
 })();
 
