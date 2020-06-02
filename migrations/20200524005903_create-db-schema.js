@@ -9,7 +9,7 @@ exports.up = function(knex) {
             table.text('bio');
             table.string('country').notNullable();
             table.string('city').notNullable();
-            table.string('photo_url').unique().notNullable();
+            table.string('photo_url').unique();
             table.timestamps();
         })
         .createTable('events', table => {
