@@ -8,7 +8,7 @@ exports.up = function(knex) {
             table.string('surname').notNullable();
             table.text('bio');
             table.string('country').notNullable();
-            table.string('city').notNullable();
+            table.string('city');
             table.string('photo_url').unique();
             table.timestamps();
         })
