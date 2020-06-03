@@ -9,6 +9,8 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
+    ports:
+      - '3306:3306'
 
   yce-server:
     build: .
@@ -23,3 +25,5 @@ services:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - JWT_TOKEN_SECRET=${JWT_TOKEN_SECRET}
       - SALT_ROUNDS=${SALT_ROUNDS}
+    ports:
+      - '8000:8000'

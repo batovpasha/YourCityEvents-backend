@@ -12,7 +12,8 @@
         "migration-dev": "knex migrate:latest --env development",
         "migration-staging": "knex migrate:latest --env staging",
         "migration-production": "knex migrate:latest --env production",
-        "dev": "nodemon -L index.js"
+        "dev": "nodemon -L index.js",
+        "start": "node index.js"
     },
     "dependencies": {
         "babel-eslint": "^10.1.0",

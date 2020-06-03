@@ -7,6 +7,10 @@ COPY yarn.lock yarn.lock
 COPY knexfile.js knexfile.js
 COPY index.js index.js
 COPY migrations/ migrations/
+COPY app.js app.js
+COPY db/ db/
+COPY lib/ lib/
+COPY config/ config/
 
 # Install app dependencies
 RUN yarn
@@ -15,4 +19,4 @@ RUN yarn
 ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.7.3/wait /wait
 RUN chmod +x /wait
 
-CMD /wait && yarn run migration-production
+CMD /wait && yarn run migration-production && npm start
