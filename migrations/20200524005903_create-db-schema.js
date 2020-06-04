@@ -19,11 +19,11 @@ exports.up = function(knex) {
             table.timestamp('start_date').notNullable().defaultTo(knex.fn.now());
             table.timestamp('end_date').notNullable().defaultTo(knex.fn.now());
             table.string('country').notNullable();
-            table.string('city').notNullable();
+            table.string('city');
             table.string('location').notNullable();
             table.integer('price').notNullable();
             table.string('photo_url').unique().notNullable();
-            table.integer('organizer_id').unsigned();
+            table.integer('organizer_id').unsigned().notNullable();
             table.foreign('organizer_id').references('users.id').onDelete('CASCADE');
             table.unique([ 'name', 'start_date', 'country', 'city', 'location' ]);
         })

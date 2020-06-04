@@ -1,5 +1,6 @@
 const knex = require('./db');
 
 module.exports = {
-    Users : () => knex('users')
+    Users  : () => knex('users'),
+    Events : () => knex('events')
 };
