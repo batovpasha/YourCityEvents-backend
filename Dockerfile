@@ -11,6 +11,7 @@ COPY app.js app.js
 COPY db/ db/
 COPY lib/ lib/
 COPY config/ config/
+COPY static/ static/
 
 # Install app dependencies
 RUN yarn
